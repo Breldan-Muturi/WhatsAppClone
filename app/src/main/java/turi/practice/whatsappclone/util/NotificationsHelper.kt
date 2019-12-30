@@ -11,10 +11,13 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import turi.practice.whatsappclone.R
 import turi.practice.whatsappclone.activities.MainActivity
+import turi.practice.whatsappclone.adapters.ConversationAdapter
+import turi.practice.whatsappclone.adapters.ConversationAdapter.Companion.MESSAGE_OTHER_USER
 
 class NotificationsHelper(val context: Context) {
     private val CHANNEL_ID = context.getString(R.string.default_notification_channel_id)
     private val NOTIFICATION_ID = 123
+
 
     fun createNotification(){
         createNotificationChannel()
@@ -49,5 +52,8 @@ class NotificationsHelper(val context: Context) {
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
+    }
+    fun NotificationManager.cancelNotifications() {
+        cancelAll()
     }
 }

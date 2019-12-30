@@ -18,6 +18,9 @@
 
     <string name="text_signup"><u>No account? Go to Signup</u></string>
     <string name="text_login"><u>Already have an account? Go to login.</u></string>
+    <string name="chat_notification_channel_id" translatable="false">chat_channel</string>
+    <string name="chat_notification_channel_name" translatable="true">Chat</string>
+    <string name="notification_title">New Whatsapp message</string>
 
     <string name="hello_status_update_fragment">Hello status update fragment</string>
     <string name="hello_chats_fragment">Hello chats fragment</string>
